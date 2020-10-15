@@ -20,3 +20,4 @@ Print_values <- function(a,b,c) {
 }
 Print_values(6,8,7)
 
+#建议采用 if(){} else(){}结构，逻辑关系更清楚
