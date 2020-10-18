@@ -1,0 +1,21 @@
+operator <- c("+", "-")
+lsts <- list("1")
+for (i in seq(from = 2, to = 9, by = 1)) {
+  for (j in seq_len(length(lsts))) {
+    for (op in operator) {
+      lsts <- append(lsts, paste0(lsts[[j]], op, i))
+    }
+    lsts[[j]] <- paste0(lsts[[j]], i)
+  }
+}
+
+Find_expression <- function(target) {
+  solutions <- list()
+  for (line in lsts) {
+    if (eval(parse(text = line)) == target) {
+      s <- paste0(line, "=", target)
+      solutions <- append(solutions, s)
+    }
+  }
+  return(solutions)
+}
