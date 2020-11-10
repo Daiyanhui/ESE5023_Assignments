@@ -11,6 +11,12 @@ Sig_Eqs %>%
   group_by(COUNTRY)%>%
   summarize(total_number_deaths = sum(DEATHS,na.rm = TRUE)) %>%
   arrange(desc(total_number_deaths))
+# @MingYANG noticed:
+# you should print the TOP 10 of these selected data
+# pipe the selected data into a tibble just like "EQ"， and print(EQ[1:10,])
+# in line9: EQ<-Sig_Eqs %>%
+# under line13 additional insert "print(EQ[1:10,])" 
+# the end
 #1.3
 Sig_Eqs %>%
   select(YEAR, COUNTRY, EQ_PRIMARY)%>%
@@ -40,6 +46,6 @@ for (i in 1:num) {
 Results_desc<-Results%>%
   #group_by(COUNTRY)%>%
   arrange(desc(t_N_EQ))
-
+# good work
 
   
