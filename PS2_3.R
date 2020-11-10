@@ -7,9 +7,9 @@ data1 <- as_tibble(data)
 data1_valid <- data1%>%
   mutate(Year = V04001) %>%
   mutate(Month = V04002) %>%
-  mutate(temp_data = ifelse(V12001_701!=999999 , V12001_701, NA)) %>% #ÎÂ¶ÈÊı¾İ
-  mutate(wind_data = ifelse(V11291_701!=999999 , V11291_701, NA)) %>%  #·çËÙÊı¾İ
-  mutate(p_data = ifelse(V13305!=999999 , V13305, NA)) %>% #½µË®Á¿Êı¾İ
+  mutate(temp_data = ifelse(V12001_701!=999999 , V12001_701, NA)) %>% #æ¸©åº¦æ•°æ®
+  mutate(wind_data = ifelse(V11291_701!=999999 , V11291_701, NA)) %>%  #é£é€Ÿæ•°æ®
+  mutate(p_data = ifelse(V13305!=999999 , V13305, NA)) %>% #é™æ°´é‡æ•°æ®
   select(Year,Month,temp_data,wind_data,p_data) 
 #7.2
 data1_valid %>%
@@ -40,7 +40,7 @@ data1_valid %>%
   summarize(Monthly_mean = mean(temp_data,na.rm = TRUE))%>%
   #mutate(month=Month[which(Monthly_mean==max(Monthly_mean,na.rm=TRUE))])%>%
   ggplot(aes(x=Month, y=Monthly_mean))+
-  geom_line() # Ã¿¸öÔÂ1981-2018Äê¶àÄêÆ½¾ùÎÂ¶È
+  geom_line() # æ¯ä¸ªæœˆ1981-2018å¹´å¤šå¹´å¹³å‡æ¸©åº¦
 
 
 #4)
@@ -50,15 +50,15 @@ data1_valid %>%
   summarize(Monthly_mean = mean(p_data,na.rm = TRUE))%>%
   #mutate(month=Month[which(Monthly_mean==max(Monthly_mean,na.rm=TRUE))])%>%
   ggplot(aes(x=Month, y=Monthly_mean))+
-  geom_line() # Ã¿¸öÔÂ1981-2018Äê¶àÄêÆ½¾ù½µÓê
+  geom_line() # æ¯ä¸ªæœˆ1981-2018å¹´å¤šå¹´å¹³å‡é™é›¨
 
-#5£©
+#5ï¼‰
 data1_valid %>%
   select(Year,Month,wind_data)%>%
   group_by(Month)%>%
   summarize(Monthly_mean = mean(wind_data,na.rm = TRUE))%>%
   #mutate(month=Month[which(Monthly_mean==max(Monthly_mean,na.rm=TRUE))])%>%
   ggplot(aes(x=Month, y=Monthly_mean))+
-  geom_line() # Ã¿¸öÔÂ1981-2018Äê¶àÄêÆ½¾ù·çËÙ
+  geom_line() # æ¯ä¸ªæœˆ1981-2018å¹´å¤šå¹´å¹³å‡é£é€Ÿ
 
-  
+  #good work
