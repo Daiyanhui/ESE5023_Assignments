@@ -9,3 +9,5 @@ plot(Temperature ~ Elevation,
 fit <- lm(Temperature ~ Elevation)
 summary(fit)
 abline(fit,lwd=5,col="red")
+
+# good work
