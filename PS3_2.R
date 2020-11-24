@@ -17,3 +17,5 @@ ggplot(bone_data_tbl, aes(x = Bone, y = measurement, fill = Bone)) +
 
 anova_one_way <- aov(measurement ~ Bone, data = bone_data_tbl)
 summary(anova_one_way)
+
+# good work
