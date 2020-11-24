@@ -16,3 +16,4 @@ boxplot(Rainfall ~ Label,data=data_tbl)
 anova_one_way <- aov(Rainfall ~ Label, data = data_tbl)
 summary(anova_one_way)
 
+# good work
