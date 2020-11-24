@@ -18,3 +18,5 @@ ggplot(zinc_data_tbl, aes(x = Class, y = Zinc_level, fill = Class)) +
 anova_one_way <- aov(Zinc_level ~ Class, data = zinc_data_tbl)
 summary(anova_one_way)
 #TukeyHSD(anova_one_way)
+
+# good work 
