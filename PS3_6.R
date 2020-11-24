@@ -25,3 +25,4 @@ fit2 <- lm(perf_pre ~ perf, data=cpus_test1)
 summary(fit2)
 abline(fit2,lwd=3,col="blue")
 text(150,600, "Mean Bias = 39.03")
+# good work
