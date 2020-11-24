@@ -3,3 +3,5 @@ data_1982 <- c(2.8,4.2,8.7,15,21.5,25,25.8,24.9,19.9,17.5,9.9,3.8)
 t.test(data_1981,data_1982)
 anova_one_way <- aov(data_1982 ~ data_1981)
 summary(anova_one_way)
+
+# ?
