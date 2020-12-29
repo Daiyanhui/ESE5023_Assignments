@@ -75,3 +75,7 @@ image(cor(matrix(rnorm(400),nrow = 20)),axes = F)
 mtext(text = c(paste("country",1:21)),side = 2,line = 0.3,at = seq(0,1,0.05),las = 1,cex = 0.8)
 mtext(text = c(paste("country",1:21)),side = 1,line = 0.3,at = seq(0,1,0.05),las = 2,cex = 0.8)
 image.plot(sample,legend.only = T)
+
+# MingYANG noticed:
+# Time series plot is too simple
+# good work
