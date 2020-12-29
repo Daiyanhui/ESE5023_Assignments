@@ -74,3 +74,7 @@ plot(forecast(model, months_forecast), include = months_in_plot,
      xlab="Time", 
      ylab="Temperature",type="o",lwd=1,
      col = "blue") 
+
+# MingYANG noticed:
+# good work but there is no necessary explain in your report
+# the end
